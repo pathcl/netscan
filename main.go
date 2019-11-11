@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/genuinetools/pkg/cli"
-	"github.com/jessfraz/netscan/pkg/scanner"
-	"github.com/jessfraz/netscan/version"
+	"github.com/pathcl/netscan/pkg/scanner"
+	"github.com/pathcl/netscan/version"
 	"github.com/sirupsen/logrus"
 )
 
