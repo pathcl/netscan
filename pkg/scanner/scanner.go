@@ -153,12 +153,12 @@ func (s *Scanner) ScanToLogger(log logger) {
 					defer wg.Done()
 
 					guard <- struct{}{}
-					log.Debugf("Scanning %s://%s", proto, addr)
+					// log.Debugf("Scanning %s://%s", proto, addr)
 					c, err := net.DialTimeout(proto, addr, s.timeout)
 					<-guard
 					if err == nil {
 						c.Close()
-						log.Infof("%s://%s is alive and reachable", proto, addr)
+						fmt.Println(addr)
 					}
 				}(proto, addr)
 			}

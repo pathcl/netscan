@@ -167,7 +167,7 @@ func main() {
 			}
 		}()
 
-		log.Infof("Scanning on %s using protocols (%s) over ports %s", args[0], strings.Join(protocols, ","), ports.String())
+		// log.Infof("Scanning on %s using protocols (%s) over ports %s", args[0], strings.Join(protocols, ","), ports.String())
 
 		scan := scanner.NewScanner(scanner.WithTimeout(timeout), scanner.WithProtocols(protocols), scanner.WithParallelRunners(parallelRunners))
 
